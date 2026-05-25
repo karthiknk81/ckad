@@ -1,6 +1,8 @@
 # Certified Kubernetes Application Developer (CKAD)
 ## LAB
 - [iximiuz](https://labs.iximiuz.com/playgrounds?category=kubernetes&filter=all)
+- [kodekloud](https://kodekloud.com/public-playgrounds)
+  
 ## PRACTICE Exercise
 - [TARIQM *](https://github.com/tariqm/CKAD-2026)
 - [hitenpratap](https://hitenpratap.github.io/CKAD-Exercises/)
