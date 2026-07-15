@@ -1,0 +1,36 @@
+You got it. In the real CKAD exam, the environment is intense, and the questions are often presented as large, dense paragraphs of text with mixed requirements, filesystem paths, and command instructions scrambled together.
+
+Here is **Batch 3** rewritten in that exact **unstructured, real-exam format**. No neat bullet points, just the raw scenario as you'll see it on your screen.
+
+---
+
+## Batch 3: Services, Networking, & Resource Management
+
+**Recommended Time:** 25 minutes
+
+**Cumulative Time Elapsed:** ~30 minutes (Approx. 1 hour 30 minutes remaining)
+
+### Question 7
+
+```text
+The development team has recently created a lightweight API backend for testing purposes and needs internal cluster communication configured. Create a single Pod named api-backend running the image nginx:1.21-alpine in the default namespace. This Pod must be uniquely identified across the cluster and should be created with the label app=api-backend. Once the Pod is running, create a ClusterIP Service named api-service that exposes port 80 of the newly created api-backend Pod on the service port 8080. Finally, to verify the connectivity of your setup, spin up a temporary Pod of image busybox:1.31.0 and use a tool like wget to output the response from the service using the command wget -O- api-service:8080 to ensure the port redirection is functional.
+
+```
+
+### Question 8
+
+```text
+During a cluster resource audit, the operations team noticed that several namespaces are running low on available memory and CPU. To prevent resource starvation, you must ensure that all new deployments are strictly constrained. First, create a new Namespace named limited-space. In this newly created namespace, deploy a workload named resource-app using a Deployment resource with exactly 2 replicas using the image httpd:2.4-alpine. Every container running within the pods of this Deployment must be strictly configured with resource constraints: assign a memory request of 32Mi and a memory limit of 64Mi, and also assign a CPU request of 50m (millicores) along with a CPU limit of 100m. Verify the deployment rolls out successfully under these constraints.
+
+```
+
+### Question 9
+
+```text
+Your security compliance officer has requested strict network isolation for database workloads running in the default namespace. Assume there are existing Deployments in the default namespace: one named backend-app with the label tier=backend, and another named db-app with the label tier=database. You need to create a NetworkPolicy named db-isolation in the default namespace to secure the database. This policy must be configured such that it restricts all ingress traffic to any Pods carrying the label tier=database. The policy should specifically allow incoming TCP traffic only if it is destined for port 5432 and originates from Pods that are labeled with tier=backend. Ensure that all other non-compliant incoming traffic to the database Pods is completely blocked by this policy while not restricting egress traffic from the database Pods.
+
+```
+
+---
+
+Take a breath, parse the text carefully to extract your requirements, and show me how you solve these three.
